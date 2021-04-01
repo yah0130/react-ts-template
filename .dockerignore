@@ -1,0 +1,17 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+.DS_Store
+README.md
+run
+logs
+docs
+
+.vscode
+.idea

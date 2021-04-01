@@ -16,7 +16,8 @@ const config: Configuration = {
       manifest: path.resolve(__dirname, '../dll/vendor.manifest.json')
     }),
     new AddAssetHtmlPlugin({
-      filepath: path.resolve(__dirname, '../dll/**/*.js')
+      filepath: path.resolve(__dirname, '../dll/**/*.js'),
+      publicPath: ''
     })
   ]
 };
