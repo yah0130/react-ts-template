@@ -1,0 +1,17 @@
+# top-most EditorConfig file
+# 表示最顶层的配置文件，发现设为true时，才会停止查找.editorconfig文件
+root = true
+# 匹配除路径分隔符（/)之外的任意字符
+[*]
+# 设置编码
+charset = utf-8
+# 设置换行符，值为lf(常用)、cr和crlf
+end_of_line = lf
+# 设置缩进风格(tab是硬缩进，space为软缩进)
+indent_style = space
+# 用一个整数定义的列数来设置缩进的宽度，如果indent_style为tab，则此属性默认为tab_width
+indent_size = 2
+# 设置为true以删除换行符前面的任何空白字符
+trim_trailing_whitespace = true
+# 设为true表示使文件以一个空白行结尾
+insert_final_newline = true
