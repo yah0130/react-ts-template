@@ -4,6 +4,7 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import Cssminimizer from 'css-minimizer-webpack-plugin';
 import { Configuration } from 'webpack';
+
 const BaseConfig: Configuration = {
   entry: path.resolve(__dirname, '../src/index.tsx'),
   output: {
@@ -13,15 +14,15 @@ const BaseConfig: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(j|t)sx?$/,
+        test: /\.([jt])sx?$/,
         use: 'babel-loader',
         exclude: /node_modules/
       },
       {
-        test: /\.(sc|c)ss$/,
+        test: /\.(sc|c|sa)ss$/,
         include: path.resolve(__dirname, '../src'),
         use: [
-          'MiniCssExtractPlugin.loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           {
@@ -68,6 +69,12 @@ const BaseConfig: Configuration = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.sass', '.css', '.scss', '.less'],
+    alias: {
+      '@': require('path').resolve(__dirname, 'src')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

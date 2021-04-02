@@ -1,0 +1,20 @@
+/* empty-page styles */
+.page-not-found {
+  height: 100vh;
+  display: flex;
+  .not-found-box {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    margin-top: -10rem;
+}
+  .anticon-disconnect {
+    font-size: 10rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+  .not-found-notice {
+    font-size: 1rem;
+    color: #666;
+}
+}
