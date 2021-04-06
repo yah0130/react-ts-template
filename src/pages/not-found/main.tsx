@@ -1,5 +1,4 @@
 import React from 'react';
-import { setTitle } from '../../common';
 import { DisconnectOutlined } from '@ant-design/icons';
 import './css.scss';
 
@@ -7,7 +6,6 @@ export default class NotFound extends React.Component {
   static defaultProps = {};
 
   componentDidMount() {
-    setTitle('页面不存在');
   }
 
   render() {
